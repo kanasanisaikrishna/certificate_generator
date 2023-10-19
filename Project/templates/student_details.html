@@ -1,0 +1,22 @@
+<h1>Select a Student</h1>
+<form method="GET">
+    <select name="student">
+        <option value="">Select a Student</option>
+        {% for student in students %}
+            <option value="{{ student.id }}">{{ student.sname }}</option>
+        {% endfor %}
+        <h2>{{ student.sname }}</h2>
+    </select>
+    <input type="submit" value="Select">
+</form>
+
+<h2>Selected Student: {{ student.sname }}</h2>
+
+<h2>Teachers</h2>
+<ul>
+    {% for teacher in teachers %}
+        <li>{{ teacher.tname }}</li>
+    {% endfor %}
+</ul>
+
+<hr><a href='/'>Home</a>

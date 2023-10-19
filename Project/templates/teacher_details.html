@@ -1,0 +1,19 @@
+<h1>Select a Teacher</h1>
+<form method="GET">
+    <select name="teacher">
+        <option value="">Select a Teacher</option>
+        {% for teacher in teachers %}
+            <option value="{{ teacher.id }}">{{ teacher.tname }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Select">
+</form>
+
+<h2>{{ selected_teacher.tname }}</h2>
+<h2>Students</h2>
+<ul>
+    {% for student in students %}
+        <li>{{ student.sname }}</li>
+    {% endfor %}
+</ul>
+<hr><a href='/'>Home</a><br>

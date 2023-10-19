@@ -1,0 +1,19 @@
+
+    
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify Certificate with Token</title>
+</head>
+<body>
+    <h1>Verify Certificate with Token</h1>
+    <p>Use the provided JWT token to verify the certificate:</p>
+    <form method="post" action="{% url 'verify_certificate_with_token' certificate_id %}">
+        {% csrf_token %}
+        <label for="token">JWT Token:</label>
+        <textarea name="token" id="token" rows="4" cols="50"></textarea>
+        <br>
+        <button type="submit">Verify Certificate</button>
+    </form>
+</body>
+</html>

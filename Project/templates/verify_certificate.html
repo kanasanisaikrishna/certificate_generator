@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify Certificate</title>
+</head>
+<body>
+    <h1>Verify Certificate</h1>
+    <p>Use the following JWT token to verify the certificate:</p>
+    <div class="token">
+        {{ token }}
+    </div>
+    <form method="post" action="{% url 'verify_certificate_with_token' certificate_id %}">
+        {% csrf_token %}
+        <input type="hidden" name="token" value="{{ token }}">
+        <button type="submit">Verify Certificate</button>
+    </form>
+</body>
+</html>
+
+
+

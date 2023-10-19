@@ -1,0 +1,107 @@
+<html>
+<body>
+<head>
+  <style type='text/css'>
+      body, html {
+          margin: 0;
+          padding: 0;
+      }
+      body {
+          color: black;
+          display: table;
+          font-family: Georgia, serif;
+          font-size: 24px;
+          
+          
+      }
+      .container {
+          
+          position: center;
+          width: 750px;
+          height: 563px;
+          display: table-cell;
+          vertical-align: middle;
+      }
+      .logo {
+          color: rgb(76, 175, 242);
+          text-align: center;
+      }
+
+      .marquee {
+          color: rgb(76,175, 242);
+          font-size: 48px;
+          margin: 20px;
+          text-align: center;
+      }
+      .assignment {
+          margin: 20px;
+          text-align: center;
+      }
+      .person {
+          
+          font-size: 32px;
+          font-style: italic;
+          margin: 20px auto;
+          width: 400px;
+          text-align: center;
+      }
+      .person2 {
+        margin: 20px;
+        text-align: center;
+        border-bottom: 2px solid black;
+      }
+      .person3 {
+        margin: 20px;
+        text-align: center;
+        
+      }
+      .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
+  </style>
+</head>
+<body>
+  <div>
+  <div class="container">
+      <div class="logo">
+        <img src="https://www.citypng.com/public/uploads/preview/hd-gold-black-certificate-logo-transparent-png-31625761576hadwkhbj6t.png?v=2023050615" alt="Trulli" width="200" height="150">
+      </div>
+      <div class="marquee">
+          CERTIFICATE
+      </div>
+
+      <div class="assignment">
+        
+      </div>
+      <div class="person3">
+        This certificate is presented to
+      </div>
+      <div class="person">
+        {{ certificate.student.sname }}
+      </div>
+      </div>
+      <div class="person2">
+        {{ certificate.teacher.tname }}
+      </div>
+      <div class="person2">
+        Certificate ID :  {{ certificate.id }}
+      </div>
+      </div>
+      <div class="container">
+        <div class="left-align"> Date : {{ certificate.issued_date }}</div>
+      </div>
+    </div>
+</body>
+</html>
+
